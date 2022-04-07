@@ -1,0 +1,90 @@
+.myBody{
+    background-image: url(../img/fondo2.jpeg);
+}
+header{
+    height: 15vh;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+}
+.hijoHeader{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.navPadre{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo{
+    width: 100px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.myBody{
+    background-image: 
+    padding: 10px 100px;
+    
+}
+.header{
+    text-align: right;
+
+}
+.pollo{
+width: 60%;
+display: flex;
+justify-content: center;
+
+}
+.mainPadre{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.empanada{
+    width: 100%;
+}
+.primeraLinea{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.texto{
+    text-align: center;
+}
+
+.myArticles{
+    width: 30%;
+
+}
+
+.myArticles img{
+    width: 100%;
+    max-height: 7cm;
+}
+.titulo{
+    text-align: center;
+    color: green;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.bloqueNav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .bloqueNavHijo {
+    background-color: #444;
+    color: white;
+    height: 50px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
