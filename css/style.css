@@ -24,10 +24,13 @@ header{
     flex-direction: column;
     justify-content: space-around;
 }
-.myBody{
+.mybody{
    
     padding: 10px 100px;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .header{
     text-align: right;
@@ -94,24 +97,29 @@ justify-content: center;
   .imagen{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    width: 50%;
     
 }
 .cancion{
-    background-color: black;
   display: flex;
   justify-content: center;
-  border-top-right-radius: 29px;
-  border-top-left-radius: 29px;
   width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 .twoofus{
     color: aliceblue;
+    background-color: black;
 }
 .h1{
     color: aliceblue;
     display: flex;
     justify-content: center;
     background-color: black;
+    width: 300px;
 
 }
 .mybody{
@@ -121,5 +129,5 @@ justify-content: center;
     color: aliceblue;
     display: flex;
     justify-content: center;
-
+    background-color: black;
 }
