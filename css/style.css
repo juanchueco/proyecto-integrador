@@ -120,3 +120,37 @@ justify-content: center;
 .mybody{
     background-image: url(../img/WhatsApp\ Image\ 2022-04-11\ at\ 3.56.11\ PM.jpeg);
 }
+.buscador1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+.content2{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    padding: 8px;
+    color: white;
+
+}
+.h1{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 70px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.bodyplaylist{
+    background-image: url(../img/WhatsApp\ Image\ 2022-04-11\ at\ 3.56.11\ PM.jpeg);
+}
+.nav-bar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    padding: 3px;
+
+}
