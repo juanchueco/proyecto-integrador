@@ -94,12 +94,7 @@ justify-content: center;
   .tapadisco{
       width: 60%;
   }
-  .imagen{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 50%;
-    
+  
 }
 .cancion{
   display: flex;
