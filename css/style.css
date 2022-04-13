@@ -154,3 +154,33 @@ justify-content: center;
     padding: 3px;
 
 }
+.divplaylist{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.divplaylist2{
+    margin-left: 10px;
+}
+.ulplaylist{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sectionplaylist{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer-index{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 100px;
+    color: aliceblue;
+}
