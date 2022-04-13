@@ -25,9 +25,15 @@ header{
     justify-content: space-around;
     border-radius: 100px;
 }
-.myBody{
-    margin: 0;
     
+.mybody{
+   
+    padding: 10px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin:0;
 }
 
 a {
@@ -60,7 +66,7 @@ justify-content: center;
     justify-content: space-evenly;
     width: 100%;
     padding: 10px 0px;
-    backround
+    
 }
 .texto{
     text-align: center;
@@ -118,7 +124,7 @@ justify-content: center;
 }
 .abbey{
     width: 850px;
-    height: ;
+    
 }
 .canciones{
     color: rgba(255, 255, 255, 0.459);
@@ -143,7 +149,7 @@ font-family: 'Times New Roman', Times, serif;
     padding: 0px 10px;
 }
 .beatles{
-    box-shadow: ;
+    
 }
 .bat{
     text-align: center;
@@ -178,3 +184,120 @@ font-family: 'Times New Roman', Times, serif;
     border: 3px solid #333;
 }
 
+
+  .tapadisco{
+      width: 60%;
+  }
+  
+
+.cancion{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.twoofus{
+    color: aliceblue;
+    background-color: black;
+}
+.h1{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width: 300px;
+
+}
+.mybody{
+    background-image: url(../img/WhatsApp\ Image\ 2022-04-11\ at\ 3.56.11\ PM.jpeg);
+}
+.buscador1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+.content2{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    padding: 8px;
+    color: white;
+
+}
+.h1{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 70px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.bodyplaylist{
+    background-image: url(../img/WhatsApp\ Image\ 2022-04-11\ at\ 3.56.11\ PM.jpeg);
+}
+.nav-bar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    padding: 3px;
+
+}
+.divplaylist{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.divplaylist2{
+    margin-left: 10px;
+}
+.ulplaylist{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sectionplaylist{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer-index{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 100px;
+    color: aliceblue;
+}
+.cajagrande{
+    width: 100%;
+     height:380px ;
+     background-color: rgb(138, 34, 34);
+}
+.rectangulo{
+    width: 100%;
+    height:95px;
+    background-color: rgb(177, 66, 14);
+    display: flex;
+    justify-content: space-around;
+}
+.blanco{
+    color: white;
+
+}
+.formatologo{
+  border: white 3px solid; 
+width: 30px;
+height: 30px;
+  border-radius: 50%;
+  text-align: center;
+}
