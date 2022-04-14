@@ -90,6 +90,7 @@ justify-content: center;
     color: green;
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
+    border: 3px solid #333;
 }
 .bloqueNav {
     display: flex;

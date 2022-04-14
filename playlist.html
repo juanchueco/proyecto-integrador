@@ -7,32 +7,51 @@
     <title>Document</title>
     <link rel="stylesheet" href="../proyecto-integrador/css/style.css">
     <script src="https://kit.fontawesome.com/f5f2f12da6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
    
 </head>
-<body class="bodyplaylist">
+<body class="myBody">
     <header class="header">
-
-
-        <div class="buscador1">
-            <form action="resultados.html" method= "GET" class="buscador">
-            <input type="text" name="search" value="" placeholder="busqueda" class="search">
-            <button type="submit">Search</button>
-        </form>
+        <div class="bloqueLogo">
+            <div class="hijoHeader">
+                <img class="logo" src="./img/Spotify_logo_without_text.svg.png" alt="">
+                <img class="logo" src="./img/digital_house_450x435.jpg" alt="">
+            </div>
+            <div class="hijoHeader">
+                <form action="search.html" method="get">
+                    <div>
+                        <input type="text" placeholder="Busca Artista o Musica">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i>></i></button>
+                    </div>
+                </form>
+            </div>
         </div>
 
+        <div class="bloqueNav">
+            <nav class="bloqueNav">
+                <a href="./index.html" class="home">
+                    <div class="bloqueNavHijo">HOME</div>
+                </a>
+                <a href="./index.html" class="home">
+                    <div class="bloqueNavHijo">ARTISTAS</div>
+                </a>
+                <a href="./detail-track.html" class="home">
+                    <div class="bloqueNavHijo">CANCIONES</div>
+                </a>
+                <a href="" class="home">
+                    <div class="bloqueNavHijo">ALBUM</div>
+                </a>
+                <a href="./genero.html" class="home">
+                    <div class="bloqueNavHijo">GENERO</div>
+                </a>
+                <a href="./playlist.html" class="home">
+                    <div class="bloqueNavHijo">PLAYLIST</div>
+                </a>
+            </nav>
+        </div>
     </header>
-    <section>
-        <nav class="container">
-
-            <ul class="nav-bar">
-                <li type="none" class="content2"> <a href="./index.html" class="content2">HOME</a></li>
-                <li type="none" class="content2"> <a href="generos.html" class="content2" >GÉNEROS</a></li>
-                <li type="none" class="content2"> <a href="detail-album.html" class="content2">ALBUMES</a></li>
-                <li type="none" class="content2"> <a href="detail-track.html" class="content2">ARTISTAS</a></li>
-            </ul>
-    
-        </nav>
-    </section>
+   
  
     <main> 
 
@@ -174,13 +193,10 @@
     </article>
     </section>
     </main>
-    <footer class="footer-index">
-        <div class="footer-nombres">
-            <div>
-                <p class="footer-texto"> Sol Azcarate, Juan, lucio  </p>
-            </div>
-        </div>
-          </footer>
+    <footer class="footer">
+        <p>Juan Manuel Chueco | Lucio Archimedes | Sol Azcarate</p>
+    </footer>
+</body>
  
 </body>
 </html>
