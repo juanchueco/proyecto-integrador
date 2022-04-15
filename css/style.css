@@ -285,7 +285,7 @@ font-family: 'Times New Roman', Times, serif;
     background-color: rgb(177, 66, 14);
     display: flex;
     justify-content: space-around;
-}
+    text-align: center;}
 .blanco{
     color: white;
 
@@ -295,7 +295,7 @@ font-family: 'Times New Roman', Times, serif;
 width: 30px;
 height: 30px;
   border-radius: 50%;
-  text-align: center;
+  text-align: center
 }
 .padreD{
     display: flex;
@@ -335,3 +335,11 @@ font-size: 87%;
     justify-content: center;
     align-items: le;
 }
+.favoritoscontenedor{
+ display: flex;
+ justify-content: center;
+}
+.corazon{
+    color: red;
+}
+
