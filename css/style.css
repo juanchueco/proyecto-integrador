@@ -328,4 +328,10 @@ font-size: 87%;
     text-align: center;
     
 }
-
+.imagen1{
+    max-height: 7.5cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: le;
+}
