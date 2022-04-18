@@ -332,8 +332,7 @@ font-size: 87%;
     max-height: 7.5cm;
     display: flex;
     align-items: center;
-    justify-content: center;
-    align-items: le;
+    justify-content: center;   
 }
 .favoritoscontenedor{
  display: flex;
