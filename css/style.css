@@ -332,8 +332,7 @@ font-size: 87%;
     max-height: 7.5cm;
     display: flex;
     align-items: center;
-    justify-content: center;
-    align-items: le;
+    justify-content: center;   
 }
 .favoritoscontenedor{
  display: flex;
@@ -343,7 +342,7 @@ font-size: 87%;
     color: red;
 }
 
-@media (max-width:420px max-height:420px){
+@media (max-width:420px){
     .myBody{
         background-image: url(../img/istockphoto-1293610121-612x612.jpg);
         margin: 0;
