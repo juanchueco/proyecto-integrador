@@ -706,7 +706,7 @@ font-size: 87%;
     flex-direction: row;
 margin: 3%;}
 
-.titulodisco{ text-align: center
+.titulodisco{ text-align: center;
 font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 font-size:xx-large;
 }
