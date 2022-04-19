@@ -340,4 +340,44 @@ font-size: 87%;
 }
 .corazon{
     color: red;
-} 
+
+}
+
+
+.tapadisco {
+    width: 40%;
+    margin: 15px;
+}
+
+.mybodydetail {
+    background-image: url(../img/WhatsApp\ Image\ 2022-04-11\ at\ 3.56.11\ PM.jpeg);
+}
+
+.contenedorPadre {
+    display: flex;
+}
+.contenedorDescripcion{
+    display: flex;
+    flex-direction: row;
+margin: 3%;}
+
+.titulodisco{ text-align: center;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size:xx-large;
+}
+
+.cajasdetail{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.cajascanciones{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+.textodetail{
+    text-align: center;
+    color: green;
+    font-size: x-large;
+}
