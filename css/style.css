@@ -691,6 +691,7 @@ font-size: 87%;
 }
 .tapadisco {
     width: 40%;
+    margin: 15px;
 }
 
 .mybodydetail {
@@ -713,11 +714,12 @@ font-size:xx-large;
 .cajasdetail{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:space-around;
 }
 .cajascanciones{
     display: flex;
     justify-content: space-between;
+    margin: 15px;
 }
 .textodetail{
     text-align: center;
