@@ -381,6 +381,18 @@ font-size:xx-large;
     color: green;
     font-size: x-large;
 }
+.rack1{
+    font-size: 33px;
+    border: 3px solid #333;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+}
 @media(max-width: 420px){
 .logo{
     width:40px;
@@ -410,6 +422,6 @@ font-size:xx-large;
     justify-content: space-between;
     align-items: flex-start;
     height: 20vh;
-    
+
 }
 }
