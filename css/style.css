@@ -381,3 +381,35 @@ font-size:xx-large;
     color: green;
     font-size: x-large;
 }
+@media(max-width: 420px){
+.logo{
+    width:40px;
+}
+.bloqueLogo{
+    flex-direction: column;
+}
+.header{
+    width: 100vw
+}
+.bloqueNav{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.titulo{
+    font-size: 17px;
+}
+.bloqueNavHijo {
+    height: 10px;
+    width: 160px;
+
+  }
+  .bloqueLogo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 20vh;
+    
+}
+}
