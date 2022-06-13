@@ -46,15 +46,19 @@ fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
   })
   .then(function (data) {
 
-    let section = document.querySelector(".bloqueNav");
+    let section = document.querySelector("#bloqueArtistas");
     console.log(data);
-    let album = data.artists.data
-    for (let i = 0; i < artists.length; i++) {
-      section.innerHTML += ` <article><img src=${artists[i].image} alt='' />
-      <p>Name:${artists[i].name} </p>
-      <p>Status: ${artists[i].status}</p>  
-      <a href="./detalle.html?id=${artists[i].id}">ir a detalle</a>
-      </article>`;
+    let artista = data.artists.data
+    for (let i = 0; i < 5; i++) {
+      section.innerHTML += `<article class="myArticles">
+      <a href="./detail-artists.html">
+          <div class="bloque-item-lista">
+              <h1>${artista[i].name}</h1>
+              <img class="beatles" src="${artista[i].picture}" alt="foto1">
+              <a href="./detail-artists.html?idArtista=${artista[i].id}"h>Ver detalle</a>
+          </div>
+      </a>
+  </article>`;
     }
   })
 .catch(function(error){
