@@ -1,4 +1,4 @@
- HEAD
+
 let proxy = "https://api.allorigins.win/raw?url="
 let endPoint = "https://developers.deezer.com/api/chart"
 let url= "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/chart"
@@ -64,7 +64,6 @@ fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
       </article>`;
     }
   })
-.catch(function(error){
-    console.log(error);
-})
-
+.catch(function(error) {
+    console.log(error); })
+    
