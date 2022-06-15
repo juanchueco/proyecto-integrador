@@ -62,9 +62,10 @@ justify-content: center;
     width: 100%;
 }
 .primeraLinea{
+    flex-direction: row;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 100%;
     padding: 10px 0px;
     
 }
@@ -424,4 +425,12 @@ font-size:xx-large;
     height: 20vh;
 
 }
+}
+
+#bloqueAlbumDetailArtista{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+   
 }
