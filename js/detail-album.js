@@ -4,24 +4,7 @@ let idAlbums = qsObjLiteral.get(`id`);
 
 alert(`capturando ${idAlbums}`);
 
-const url = `https://api.allorigins.win/raw?url=https://api.deezer.com/chart${idAlbums}`;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const url = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/302127${idAlbums}`;
 
 
 
@@ -32,10 +15,9 @@ fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart/${idAlbum
   .then(function (data) {
 
 
-    let etiquetaTitle = document.querySelector(".title");
-    let etiquetaCover = document.querySelector(".cover");
-    etiquetaTitle.innerHTML = `title: ${data.title}`;
-    etiquetaCover.innerText = `cover: ${data.cover}`;
+    
+
+
 
 
 
@@ -54,13 +36,13 @@ fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart/${idAlbum
   </article>`;
     }
   })
+
+
+
+
 .catch(function(error){
     console.log(error);
 })
-
-
-
-
 
 
 fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
