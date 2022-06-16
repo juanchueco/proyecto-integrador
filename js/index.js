@@ -1,4 +1,7 @@
-fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
+
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/chart`
+
+fetch(url)
   .then(function (response) {
     return response.json();
   })
@@ -9,7 +12,7 @@ fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
     let tracks = data.tracks.data
     for (let i = 0; i < 5; i++) {
       section.innerHTML += `  <article class="myArticles">
-      <a href="./detail-track.html?id=${tracks[i].title}">
+      <a href="./detail-track.html?id=${tracks[i].id}">
           <div class="bloque-item-lista">
               <h1>${tracks[i].title}</h1>
               <img class="beatles" src="${tracks[i].artist.picture}" alt="foto1">
@@ -24,7 +27,7 @@ fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
 })
 
 
-fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
+fetch(url)
   .then(function (response) {
     return response.json();
   })
@@ -35,7 +38,7 @@ fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
     let artists = data.artists.data
     for (let i = 0; i < 5; i++) {
       section.innerHTML += `<article class="myArticles">
-      <a href="./detail-artists.html?id=${artists[i].name}">
+      <a href="./detail-artists.html?id=${artists[i].id}">
           <div class="bloque-item-lista">
               <h1>${artists[i].name}</h1>
               <img class="beatles" src="${artists[i].picture}" alt="foto1">
@@ -49,7 +52,7 @@ fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
     console.log(error);
 })
 
-fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
+fetch(url)
   .then(function (response) {
     return response.json();
   })
@@ -60,7 +63,7 @@ fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
     let albums = data.albums.data
     for (let i = 0; i < 5; i++) {
       section.innerHTML += `<article class="myArticles">
-      <a href="./detail-album.html?id=${albums[i].title}">
+      <a href="./detail-album.html?id=${albums[i].id}">
           <div class="bloque-item-lista">
               <h1>${albums[i].title}</h1>
               <img class="beatles" src="${albums[i].cover}" alt="foto1">

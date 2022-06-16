@@ -1,71 +1,50 @@
 let qs = location.search;
-let qsObjLiteral = new URLSearchParams(qs);
-let idAlbums = qsObjLiteral.get(`id`);
+let qsOL = new URLSearchParams(qs)
+let idAlbum = qsOL.get('id')
+console.log(idAlbum);
 
-alert(`capturando ${idAlbums}`);
+let endpoint = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/${idAlbum}` 
 
-const url = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/302127${idAlbums}`;
-
-
-
-fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart/${idAlbums}")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-
-
-    
-
-
-
-
-
-    let section = document.querySelector("#bloqueAlbumDetailArtista");
-    console.log(data);
-    let albums = data.albums.data
-    for (let i = 0; i < 5; i++) {
-      section.innerHTML += `<article class="myArticles">
-      <a href="./detail-artists.html">
-          <div class="bloque-item-lista">
-              <h1>${albums[i].title}</h1>
-              <img class="beatles" src="${albums[i].cover}" alt="foto1">
-              <a href="./detail-artists.html?idArtista=${albums[i].id}"h>Ver detalle</a>
-          </div>
-      </a>
-  </article>`;
-    }
-  })
+fetch(endpoint)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data)
+        document.querySelector("#bloqueAlbumDetailArtista").innerHTML = `<img src=${data.cover_medium} alt="${data.title}" class="title">
+        <h1 class="nombrediscodetalle"> Nombre: ${data.title}</h1>
+        <a href="./detail-artist.html?id=${data.artist.id}" class="">
+            <h2>${data.artist.name}</h2>
+        </a>
+        <a href="./detail-genres.html?id=${data.genres.data[0].id}" class="">
+            <h3>Genero de musica: ${data.genres.data[0].name}</h3>
+        </a>
+        <h3>Fecha: ${data.release_date}</h3>`
+        
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
 
 
 
-
-.catch(function(error){
-    console.log(error);
-})
-
-
-fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-
-    let section = document.querySelector("#bloqueAlbumDetailCanciones");
-    console.log(data);
-    let tracks = data.tracks.data
-    for (let i = 0; i < 5; i++) {
-      section.innerHTML += `  <article class="myArticles">
-      <a href="./detail-track.html">
-          <div class="bloque-item-lista">
-              <h1>${tracks[i].title}</h1>
-              <img class="beatles" src="${tracks[i].artist.picture}" alt="foto1">
-              <a href="./detail-track.html?idArtista=${tracks[i].id}"h>Ver detalle</a>
-          </div>
-      </a>
-  </article>`;
-    } 
-  })
-.catch(function(error){
-    console.log(error);
-})
+    fetch(endpoint)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data)
+        for (let i = 0; i < 5; i++) {
+            document.querySelector("#bloqueAlbumDetailCanciones").innerHTML += `
+            <a href="./detail-track.html?id=${data.tracks.data[i].id}" class="">
+            <h1>canciones</h1>
+                <article class="hijacancionesdisco">
+                    <img src="${data.cover_medium}" alt="sleeponthefloor" class="">
+                    <h3 class="nombrecanciondiscodetalle">${data.tracks.data[i].title_short}</h3>
+                </article>`
+        } 
+        
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
