@@ -12,7 +12,7 @@ fetch(endpoint)
     .then(function (data) {
         console.log(data)
         document.querySelector("#bloqueAlbumDetailArtista").innerHTML = `<img src=${data.cover_medium} alt="${data.title}" class="title">
-        <h1 class="nombrediscodetalle"> Nombre: ${data.title}</h1>
+        <h1 class=""> Nombre: ${data.title}</h1>
         <a href="./detail-artist.html?id=${data.artist.id}" class="">
             <h2>${data.artist.name}</h2>
         </a>
@@ -38,9 +38,9 @@ fetch(endpoint)
             document.querySelector("#bloqueAlbumDetailCanciones").innerHTML += `
             <a href="./detail-track.html?id=${data.tracks.data[i].id}" class="">
             <h1>canciones</h1>
-                <article class="hijacancionesdisco">
+                <article class="">
                     <img src="${data.cover_medium}" alt="sleeponthefloor" class="">
-                    <h3 class="nombrecanciondiscodetalle">${data.tracks.data[i].title_short}</h3>
+                    <h3 class="">${data.tracks.data[i].title_short}</h3>
                 </article>`
         } 
         
