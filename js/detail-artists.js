@@ -4,7 +4,7 @@ let idArtista = qsOL.get('id')
 console.log(idArtista);
 
 let endpoint = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${idArtista}`
-
+let endpoint2 = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${idArtista}/albums/`
 fetch(endpoint)
     .then(function (response) {
         return response.json();
@@ -21,15 +21,18 @@ fetch(endpoint)
 
         document.querySelector('#bloqueArtistas').innerHTML = data.name
       
-        fetch("https://api.allorigins.win/raw?url=https://api.deezer.com/chart/${idArtista}")
+        fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/chart`)
         .then(function (response) {
           return response.json();
         })
         .then(function (data) {
-          let section = document.querySelector("#bloqueArtistas");
-          console.log(data);
+          let section = document.querySelector("#bloqueArtistas");         
           let albums = data.albums.data
-          for (let i = 0; i < 5; i++) {
+          console.log(albums)
+          for (let i = 0; i < albums.length; i++) {
+            if (albums[i].artist.id==idArtista) {
+                
+            
             section.innerHTML += ` <article class="myArticles">
             <a href="./detalle-bands.html?id=${data.albums.data[i]}">
                 <div class="bloque-item-lista">
@@ -40,6 +43,7 @@ fetch(endpoint)
             </a>
         </article> 
       `;
+      }
           } 
         })
       
@@ -49,3 +53,5 @@ fetch(endpoint)
       .catch(function(error){
           console.log(error);
       })})
+
+     

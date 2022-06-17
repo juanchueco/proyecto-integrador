@@ -16,7 +16,7 @@ fetch(endpoint)
         <a href="./detail-artist.html?id=${data.artist.id}" class="">
             <h2>${data.artist.name}</h2>
         </a>
-        <a href="./detail-genres.html?id=${data.genres.data[0].id}" class="">
+        <a href="./detalle-genero.html?id=${data.genres.data[0].id}" class="">
             <h3>Genero de musica: ${data.genres.data[0].name}</h3>
         </a>
         <h3>Fecha: ${data.release_date}</h3>`

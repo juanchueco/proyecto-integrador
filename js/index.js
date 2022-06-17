@@ -75,3 +75,22 @@ fetch(url)
 .catch(function(error){
     console.log(error);
 }) 
+
+document.querySelector("#formBusqueda").addEventListener("submit", function(e){
+
+  if(!validarBusqueda()){
+      e.preventDefault();    
+  }
+});
+function validarBusqueda() {
+  let nombre = document.querySelector("#nombre").value;
+if (nombre=="") {
+  alert("El campo de busqueda esta vacio")
+  return false
+}
+if (nombre.length<4){
+  alert("La busqueda no puede tener menos de 4 caracteres")
+  return false
+}
+return true
+}
