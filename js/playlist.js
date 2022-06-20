@@ -1,38 +1,24 @@
-let recuperoStorage=localStorage.getItem("favoritos");
-let favoritos = JSON.parse(recuperoStorage);
-
-/*capturar el elemento en el DOM*/;
-
-let section = document.querySelector(".lista");
-
-let canciones = "";
-
-/*evaluar el localstorage*/
-
-if(favoritos == null || favoritos.lenght == 0) {
-    section.innerHTML = '<p>no hay items en favoritos</p>';
-} else {
-            /*si contiene elementos*/
-            for (let i = 0; i <favoritos.length; i++){
-                    /*buscar el personaje*/
-                    let URL = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/"+favoritos[i];
-
-                    fetch(URL)
-                    .then(function(response){
-                    return response.json();
-                    })
-                    .then(function(data){
-                    cancionesFavoritos += `<article>
-                    <img src=${data.image}>
-                    <p>Nombre: ${data.name}</p>
-                    <a href="/detalle.html?id=${data.id}">Ir a detalle</a>
-                    </article>
-                    <hr>`
-                    section.innerHTML = cancionesFavoritos;
-                    }).catch(function(error){
-                    console.log(error)
-                    })
-            }
-            
-            
+let playlist=[]
+if(localStorage.getItem("playlist")&&localStorage.getItem("playlist")!=null){
+    playlist=JSON.parse(localStorage.getItem("playlist"))
+}
+if(playlist.length==0){
+    document.querySelector(".nombreplaylisyt").innerHTML="no hay elementos en favoritos" 
+}
+let lista= document.querySelector(".divplaylist")
+console.log(playlist)
+for (let i=0;i<playlist.length;i++){
+    let url= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${playlist[i]}`
+    fetch(url)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+       lista.innerHTML += `<div class="divplaylist">
+       <i class="fa-solid fa-star"></i> 
+       <li class="divplaylist2" type="none" ><img src="${data.album.cover_medium}" alt=""><a href="detail-track.html?id=${data.id}">${data.title}</a><a href="detail-artists.html?id=${data.artist.id}">${data.artist}</a><a href="detail-album.html?id=${data.album.id}">${data.album.title}</a></li> 
+   </div>`
+    })
+    
 }
