@@ -3,29 +3,46 @@ let qsOL = new URLSearchParams(qs)
 let idGenero = qsOL.get('id')
 console.log(idGenero);
 
-
-
-
-let endpoint = `https://api.allorigins.win/get?url=https://api.deezer.com/genre/${idGenero}/artists` 
+let endpoint = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre`
+let endpoint2 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${idGenero}/artists`
 
 fetch(endpoint)
+    .then(function (response) {
+        return response.json(); 
+    })
+    .then(function (data) {
+        console.log(data)
+        for (let i = 1; i < 6; i++) {
+            document.querySelector("#cajaGenerosDetalle").innerHTML += `  <h1 class="genero"><i class="fa-solid fa-guitar-electric">${data.data[i].name}</i> <i class="fa-solid fa-music"></i></h1>
+        <div class="padreD">
+            <img class="rock" src="${data.data[i].picture}" alt="">
+        </div>`
+
+        }
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
+
+    fetch(endpoint2)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
         console.log(data)
         for (let i = 0; i < 6; i++) {
-        document.querySelector("#cajaGeneros").innerHTML += ` <article class="myArticles">
-        <a href="./detalle-genero.html?id=${data.data[i].id}">
+            document.querySelector("#cajaDetalleArtistas").innerHTML += `<article class="myArticles">
+           
             <div class="bloque-item-lista">
-                <h2>${data.data[i].name}</h2>
-                <img class="beatles" src="${data.data[i].picture_medium}" alt="foto1">
-             
-            </div> 
-        </a>
+                <h1>${data.data[i].name}</h1>
+                <img class="beatles" src="${data.data[i].picture}" alt="foto1">
+            </div>
+      
     </article>`
-        
-    }}) 
+
+        }
+    })
     .catch(function (error) {
         console.log(error);
     })
+
