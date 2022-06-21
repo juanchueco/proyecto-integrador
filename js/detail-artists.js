@@ -4,7 +4,7 @@ let idArtista = qsOL.get('id')
 console.log(idArtista);
 
 let endpoint = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${idArtista}`
-let endpoint2 = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${idArtista}/albums/`
+let endpoint2 = `https://api.deezer.com/artist/${idArtista}/albums`
 fetch(endpoint)
     .then(function (response) {
         return response.json();
@@ -21,7 +21,7 @@ fetch(endpoint)
 
         document.querySelector('#bloqueArtistas').innerHTML = data.name
       
-        fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/chart`)
+        fetch(endpoint2)
         .then(function (response) {
           return response.json();
         })
