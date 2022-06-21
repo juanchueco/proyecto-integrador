@@ -60,7 +60,7 @@ button.addEventListener("click", function(){
     button.innerHTML='<i class="fa-solid fa-heart"></i>'
 }
 let guardarlocal=JSON.stringify(listaplaylist)
-localStorage.setItem("playlist",guardarlocal)
+localStorage.getItem("playlist",guardarlocal)
 console.log(localStorage)
 console.log(listaplaylist)
 })
